@@ -71,6 +71,57 @@
  * @brief BSEC usage examples
  * @{*/
 
+/*******************************************************************************
+ * Copyright (c) 2015 Thomas Telkamp and Matthijs Kooijman
+ *
+ * Permission is hereby granted, free of charge, to anyone
+ * obtaining a copy of this document and accompanying files,
+ * to do whatever they want with them without any restriction,
+ * including, but not limited to, copying, modification and redistribution.
+ * NO WARRANTY OF ANY KIND IS PROVIDED.
+ *
+ * This example sends a valid LoRaWAN packet with payload "Hello,
+ * world!", using frequency and encryption settings matching those of
+ * the The Things Network.
+ *
+ * This uses ABP (Activation-by-personalisation), where a DevAddr and
+ * Session keys are preconfigured (unlike OTAA, where a DevEUI and
+ * application key is configured, while the DevAddr and session keys are
+ * assigned/generated in the over-the-air-activation procedure).
+ *
+ * Note: LoRaWAN per sub-band duty-cycle limitation is enforced (1% in
+ * g1, 0.1% in g2), but not the TTN fair usage policy (which is probably
+ * violated by this sketch when left running for longer)!
+ *
+ * To use this sketch, first register your application and device with
+ * the things network, to set or generate a DevAddr, NwkSKey and
+ * AppSKey. Each device should have their own unique values for these
+ * fields.
+ *
+ * Do not forget to define the radio type correctly in config.h.
+ * 
+ * 
+ * 
+ * Connect your NODE MCU as this
+ *  D1 (GPIO5)  - DIO0 (SX1275/RFM95)
+ *  D2 (GPIO4)  - DIO1
+ *  D5 (GPIO14) - SCK 
+ *  D6 (GPIO12) - MISO
+ *  D7 (GPIO13) - MOSI
+ *  DO (GPIO16) - NSS
+ *  GND         - GND
+ *  3.3v        - VCC
+ * 
+ * Compile this code as NODEMCU 1.0
+ *******************************************************************************/
+
+ * Connect your BME680 as this
+ *  D3 (GPIO0)  - SDA (BME680)
+ *  D4 (GPIO2)  - SCL
+ *  GND         - GND
+ *  3.3v        - VCC
+ *******************************************************************************/
+
 /**********************************************************************************************************************/
 /* header files */
 /**********************************************************************************************************************/
