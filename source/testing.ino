@@ -65,7 +65,25 @@
  * Example for using of BSEC library in a fixed configuration with the BME680 sensor.
  * This works by running an endless loop in the bsec_iot_loop() function.
  */
+ * Connect your NODE MCU as this
+ *  D1 (GPIO5)  - DIO0 (SX1275/RFM95)
+ *  D2 (GPIO4)  - DIO1
+ *  D5 (GPIO14) - SCK 
+ *  D6 (GPIO12) - MISO
+ *  D7 (GPIO13) - MOSI
+ *  DO (GPIO16) - NSS
+ *  GND         - GND
+ *  3.3v        - VCC
+ * 
+ * Compile this code as NODEMCU 1.0
+ *******************************************************************************/
 
+ * Connect your BME680 as this
+ *  D3 (GPIO0)  - SDA (BME680)
+ *  D4 (GPIO2)  - SCL
+ *  GND         - GND
+ *  3.3v        - VCC
+ *******************************************************************************/
 /*!
  * @addtogroup bsec_examples BSEC Examples
  * @brief BSEC usage examples
