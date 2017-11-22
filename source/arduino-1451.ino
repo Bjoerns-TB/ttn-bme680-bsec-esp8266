@@ -365,9 +365,8 @@ void output_ready(int64_t timestamp, float iaq, uint8_t iaq_accuracy, float temp
     LMIC_setTxData2(1, mydata, sizeof(mydata) - 1, 0);
     Serial.println(F("Packet queued"));
   }
-  // LMIC init
-    os_init();
-    // Reset the MAC state. Session and pending data transfers will be discarded.
+      
+    delay(15000);
     LMIC_reset();
 
     // Set static session parameters. Instead of dynamically establishing a session
